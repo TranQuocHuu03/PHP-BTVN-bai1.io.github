@@ -1,0 +1,26 @@
+#forml{
+    padding-left: 400px;
+    padding-top:30px;
+    width: 400px;
+}
+.tinhtien{
+    background: pink ;
+    position: relative;
+    top:22px;
+}
+.tinhtienh1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.body{
+    background: palevioletred;
+    padding-left:20px  ;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+}
+.input{
+    border-radius: 10px;
+    height: 20px;
+}
+.bt1{
+    border-radius:10px;
+}
