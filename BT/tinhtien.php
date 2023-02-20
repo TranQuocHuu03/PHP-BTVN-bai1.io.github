@@ -43,22 +43,26 @@
 <body>
   <header>
   <?php
-    $rooms="";
-    $in="";
-    $out="";
-    $services="";
-     if(isset($_POST['typeroom'] , $_POST['in'] , $_POST['out'] , $_POST['dv']) ){
-    $room = $_POST['typeroom'];
+     if(isset($_POST['typerooms'],$_POST['in'],$_POST['out'],$_POST['dv'])){
+    $rooms = $_POST['typerooms'];
     $in = $_POST['in'];
     $out = $_POST['out'];
     $service = $_POST['dv'];
         if($room=="Phòng thường"){
             $room=$rooms;
         }
-        else if($room=="Phòng VIP"){}
-        else if($room=="Phòng Đơn"){}
-        else if($room=="Phòng Đôi"){}
+        else if($room=="Phòng VIP"){
+            $room=$rooms;
+        }
+        else if($room=="Phòng Đơn"){
+            $room=$rooms;
+        }
+        else if($room=="Phòng Đôi"){
+            $room=$rooms;
+        }
      }
+
+     
 ?>
   
     <form action="" method="post">
@@ -73,11 +77,11 @@
                     <b>Loại phòng</b>
                 </td>
                 <td>
-                    <select value="option" >
-                        <option name="typeroom">Phòng thường</option>
-                        <option name="typeroom">Phòng VIP</option>
-                        <option name="typeroom">Phòng Đơn</option>
-                        <option name="typeroom">Phòng Đôi</option>
+                    <select value="option" name="typerooms" >
+                        <option name="typeroom" value="1">Phòng thường</option>
+                        <option name="typeroom" value="2">Phòng VIP</option>
+                        <option name="typeroom" value="3">Phòng Đơn</option>
+                        <option name="typeroom" value="4">Phòng Đôi</option>
                     </select>
                 </td>
             </tr>
@@ -107,7 +111,7 @@
             </tr>
             <tr class="footer">
                 <td colspan="2">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >OK</button>
+                <button type="button" name="ok" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">OK</button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -117,7 +121,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="typeroom">
-                                    Type room: <input class="type" placeholder="0" value="<?php echo $rooms ?>">
+                                    Type room: <input class="type" placeholder="0" value="<?php echo $room ?>">
                                 </div>
                                 <br>
                                 <br>
@@ -132,7 +136,7 @@
                                 <br>
                                 <br>
                                 <div class="services">
-                                    Money for services: <input class="service" placeholder="0">
+                                    Money for services: <input class="service" placeholder="0" value="">
                                 </div>
                                 <br>
                                 <br>
@@ -140,10 +144,10 @@
                                     Total: <input class="totals" placeholder="0">
                                 </div>
                             </div>
-                            <!-- <div class="modal-footer">
+                            <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                                 <button type="button" class="btn btn-primary">Thanh toán</button>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,7 +156,7 @@
             </tr>
         </table>
     </form>
-
+</div>
    
   </header>
   <main>

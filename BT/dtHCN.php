@@ -41,7 +41,6 @@ $DTHCN=0;
         $dai = (int)$_POST['dai'];
         $rong=(int)$_POST['rong'];
         $DTHCN =$dai*$rong;
-        
     }
     ?>
     <center>

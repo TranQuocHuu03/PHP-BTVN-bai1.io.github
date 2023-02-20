@@ -32,9 +32,9 @@ if (isset($_POST['soa'],$_POST['sob']))
                     }
                 }
                 
-                if($a*$b%$c==0){
-                    $d=$a*$b/$c;
-                }
+                // if($a*$b%$c==0){
+                //     $d=$a*$b/$c;
+                // }
             }
             else if($a<$b){
                 for($i=1;$i<=$a;$i++){
@@ -42,9 +42,10 @@ if (isset($_POST['soa'],$_POST['sob']))
                         $c=$i;
                     }
                 }
-                if($a*$b%$c==0){
-                    $d=$a*$b/$c;
-                }
+                
+            }
+            if($a*$b%$c==0){
+                $d=$a*$b/$c;
             }
             
                 echo "USCLN của $a, $b là $c <br>"." BSCNN của $a, $b là $d";

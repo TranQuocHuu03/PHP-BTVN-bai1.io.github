@@ -1,9 +1,35 @@
-//nhập ngày bất kì kiểm tra xem ngày hôm sau là ngày mấy .<br>
-<?php
-$ngay=28;
-$thang=2;
-$nam=2001;
-if($thang==1 || $thang==3|| $thang==5 ||$thang==7 || $thang==8|| $thang==10 ||$thang==12 )
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <form method="post" action="" >
+        <input type="text" name ="1" value="" placeholder="Nhập ngày"/>
+        <br>
+        <br>
+        <input type="text" name ="3"  value="" placeholder="Nhập tháng"/> 
+        <br>
+        <br>
+        <input type="text" name ="2"  value="" placeholder="Nhập năm"/> 
+        
+        <input type="submit" name="btn" value="Kiểm tra"/>
+        <br>
+        <br>
+    </form>
+</div>
+    <?php
+    if (isset($_POST["1"],$_POST["2"],$_POST["3"])) {
+        $ngay = $_POST["1"];
+        $thang = $_POST["3"];
+        $nam = $_POST["2"];
+    }
+    if (isset($_POST["btn"])) {
+        if($thang==1 || $thang==3|| $thang==5 ||$thang==7 || $thang==8|| $thang==10 ||$thang==12 )
 Switch($ngay){ 
     case 1: 
     case 2: 
@@ -130,4 +156,7 @@ Switch($ngay){
                         break;
             };
     }
+}
 ?>
+</body>
+</html>
