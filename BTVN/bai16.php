@@ -51,7 +51,7 @@
             <br>
             <label>
                 Password:
-                <input type="text" name="pw" placeholder="nhập password" />
+                <input type="password" name="pw" placeholder="nhập password" />
             </label>
             <br>
             <br>
@@ -76,14 +76,13 @@
     if(isset($_POST["cal"])){
         foreach($arr as $taikhoan => $matkhau){
         if($tk== $taikhoan && $pw==$matkhau){
+           
             $_SESSION['tk']=$tk;   // hướng đến trang mình muốn đến
             header('Location: bai16,.php');
+            echo"<script> alert( 'Đăng nhập thành công!')</script>";
         }
         else if($tk != $taikhoan && $pw==$matkhau){
             echo "<script> alert('Tên tài khoản sai xin vui lòng kiểm tra lại!') </script>";
-        }
-        else if($tk == $taikhoan && $pw!=$matkhau){
-            echo "<script> alert('Passwork sai xin vui lòng kiểm tra lại!') </script>";
         }
         else{
             echo "<script> alert('Tên tài khoản hoặc passwork sai xin vui lòng kiểm tra lại!') </script>";
