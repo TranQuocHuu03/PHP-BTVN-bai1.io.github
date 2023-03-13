@@ -25,23 +25,21 @@ session_start();
 
 <body>
     <?php
-    // error_reporting(0);
-
-    if (isset($_GET['edit']) && ($_GET['edit'])>=0) {
-            $tensp = $_SESSION['traicay'][$_GET['edit']]["tensp"];
-            $giasp = $_SESSION['traicay'][$_GET['edit']]["giasp"];
-            $motasp = $_SESSION['traicay'][$_GET['edit']]["motasp"];
-            $hasp = $_SESSION['traicay'][$_GET['edit']]["hinhanhsp"];
+    if (isset($_GET['edit']) && ($_GET['edit']) >= 0) {
+        $tensp = $_SESSION['traicay'][$_GET['edit']]["tensp"];
+        $giasp = $_SESSION['traicay'][$_GET['edit']]["giasp"];
+        $motasp = $_SESSION['traicay'][$_GET['edit']]["motasp"];
+        $hasp = $_SESSION['traicay'][$_GET['edit']]["hinhanhsp"];
     }
     if (isset($_POST['cal'])) {
         $n = 0;
-        if (isset($_SESSION['traicay'])){
+        if (isset($_SESSION['traicay'])) {
             $n = count($_SESSION['traicay']);
-        $_SESSION['traicay'][$_GET['edit']]['tensp'] = $_POST['name'];
-        $_SESSION['traicay'][$_GET['edit']]['giasp'] = $_POST['price'];
-        $_SESSION['traicay'][$_GET['edit']]['motasp'] = $_POST['descrypt'];
-        $_SESSION['traicay'][$_GET['edit']]['hinhanhsp'] = $_POST['image'];
-        header("location:index.php");
+            $_SESSION['traicay'][$_GET['edit']]['tensp'] = $_POST['name'];
+            $_SESSION['traicay'][$_GET['edit']]['giasp'] = $_POST['price'];
+            $_SESSION['traicay'][$_GET['edit']]['motasp'] = $_POST['descrypt'];
+            $_SESSION['traicay'][$_GET['edit']]['hinhanhsp'] = $_POST['image'];
+            header("location:index.php");
         }
     }
     ?>

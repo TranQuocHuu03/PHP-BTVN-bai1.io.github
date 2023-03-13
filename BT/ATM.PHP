@@ -200,7 +200,7 @@
                                 unset($_SESION['tk']);  
                                 // để xóa một địa chỉ tk khỏi trang đó 
                                 if(!isset($_SESSION['tk'])){  // kiểm tra xem tk mình đăng nhập từ trang nào
-                                    header('location:login.php'); 
+                                    header('location:Tai/input.php'); 
                                 }
                             ?>
                         </tbody>

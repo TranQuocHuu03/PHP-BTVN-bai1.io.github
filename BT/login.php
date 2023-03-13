@@ -78,7 +78,7 @@
             header("Location: ATM.php");
             exit();
         }
-        else if($tk != $tks && $pw==$pws){
+        else if($tk!= $tks && $pw==$pws ){
             echo "<script> alert('Tên tài khoản sai xin vui lòng kiểm tra lại!') </script>";
         }
         else if($tk == $tks && $pw!=$pws){

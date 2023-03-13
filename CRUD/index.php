@@ -19,12 +19,11 @@ session_start();
         }
     </style>
 </head>
-
 <body>
     <center>
-        <div class="container">
 
-            <form method="post" action="" name="1">
+        <div class="container">
+            <form method="post" action="xoa.php" name="1">
                 <h1>Danh sách trái cây </h1><br>
                 <table border="5">
                     <tr>
@@ -63,7 +62,7 @@ session_start();
                     <button style="background-color:forestgreen; width:50px; height:20px " type="button" name="them">Add</button>
                 </a>
                 <?php
-                if (isset($_POSST['them'])) {
+                if (isset($_POST['them'])) {
                     header("location:them.php");
                 }
                 ?>

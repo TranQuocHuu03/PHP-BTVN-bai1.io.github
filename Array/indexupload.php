@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="fileupload.php" method="post" enctype="multipart/form-data">
+    <form action="#" method="post" enctype="multipart/form-data">
         <input type="file" name ="hinhanh" value="upload">
         <input type="submit" name="btn" value="Gửi">
     </form>
@@ -15,4 +15,25 @@
 </html>
 <?php
 
+if (isset($_POST['btn'])) {
+    if (isset($_FILES['hinhanh'])) {
+        if ($_FILES['hinhanh']['size'] == 0) {
+            echo "bạn chưa chọn file";
+        } else {
+            if (isset($_FILES['hinhanh'])) {
+                $file= $_FILES['hinhanh'];
+                $tenfile = $file['name'];
+                // move_uploaded_file($file['tmp_name'], $tenfile);
+                move_uploaded_file($file['tmp_name'],'./image/' . $tenfile);
+                echo "up file success!";
 ?>
+                <img src='<?php echo $tenfile ?>' width="100" ; height="100">
+                <?php
+            }
+        }
+    }
+}
+
+
+
+                ?>
